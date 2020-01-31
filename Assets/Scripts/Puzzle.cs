@@ -30,9 +30,8 @@ public class Puzzle : MonoBehaviour
 
     void Start()
     {
-        if (Mathf.Sqrt (fichaImg.Count) == Mathf.Round (Mathf.Sqrt(fichaImg.Count))) //Comprueba si el numero de fichas es cuadrado
-        {
-
+        if (Mathf.Sqrt (fichaImg.Count) == Mathf.Round (Mathf.Sqrt(fichaImg.Count))){ //Comprueba si el numero de fichas es cuadrado
+            CrearFichas();
         } else {
             print("Imposible crear fichas");
         }
@@ -77,11 +76,28 @@ public class Puzzle : MonoBehaviour
             posicionesIniciales.Add(arrayFichas[i].transform.position);                             //Asignamos las posiciones iniciales de las fichas
         }
 
+        Barajar();
 
-
-
-        //barajar las fichas
+        
     }
+
+
+    void Barajar()
+    {
+        int aleatorio;
+        
+        for (int i = 0; i < arrayFichas.Length; i++)
+        {
+            aleatorio = Random.Range(i, arrayFichas.Length);                                        //creamos un numero aleatorio entre i y el numero de fichas
+            Vector3 posTemp = arrayFichas[i].transform.position;                                    //en una variable temporal guardamos la posicion inicial
+            arrayFichas[i].transform.position = arrayFichas[aleatorio].transform.position;          //cambiamos la posicion de una ficha aleatoria a la posicion que hemos guardado
+            arrayFichas[aleatorio].transform.position = posTemp;                                    //asignamos la posicion inical que habiamos guardado
+        }
+    }
+
+
+    
+
 
     
 }
