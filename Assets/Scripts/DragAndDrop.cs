@@ -6,14 +6,15 @@ public class DragAndDrop : MonoBehaviour
 {
     Vector3 screenSpace, offset, posInicial;
     Sensores sensores;
-    Puzzle puzzle;
+     Puzzle puzzle;
     bool moviendoLeft, moviendoRight, moviendoUp, moviendoDown;
-    UI ui;
+     UI ui;
 
 
     private void Awake(){
         sensores = GetComponentInChildren(typeof(Sensores)) as Sensores;
         puzzle = GameObject.Find("Scripts").GetComponent(typeof(Puzzle)) as Puzzle;
+        ui = GameObject.Find("Scripts").GetComponent(typeof(UI)) as UI;
     }
 
     private void OnMouseDown(){
@@ -38,7 +39,7 @@ public class DragAndDrop : MonoBehaviour
             curPosition = new Vector3(transform.position.x, curPosition.y, 0);                  //movimiento vertical
             if (!sensores.ocupadoUp && !moviendoUp && !moviendoDown)
                 moviendoUp = true;
-            if (!sensores.ocupadoDown && !moviendoUp && !moviendoDown)
+            if (!sensores.ocupadoDown && !moviendoDown && !moviendoUp)
                 moviendoDown = true;
         } else {
             return;
@@ -73,12 +74,17 @@ public class DragAndDrop : MonoBehaviour
     }
 
     private void OnMouseUp(){
+
+        if (transform.position != posInicial)
+        {
+            ui.SumarMovimiento();
+            puzzle.ComprobarGanador();
+        }
+        
         transform.position = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), 0);
         moviendoLeft = false;
         moviendoRight = false;
         moviendoUp = false;
         moviendoDown = false;
-        ui.SumarMovimiento();
-        puzzle.ComprobarGanador();
     }
 }
