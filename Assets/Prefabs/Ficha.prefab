@@ -387,7 +387,7 @@ GameObject:
   - component: {fileID: 6355826368593019108}
   - component: {fileID: 6516322430575263801}
   - component: {fileID: 4568112323349597596}
-  - component: {fileID: 1406227736425317166}
+  - component: {fileID: 8738171457606786187}
   m_Layer: 0
   m_Name: Ficha
   m_TagString: Ficha
@@ -486,7 +486,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &1406227736425317166
+--- !u!114 &8738171457606786187
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -495,6 +495,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 8173507299562568335}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: ad3d9f37945be4c44962fa4781298f08, type: 3}
+  m_Script: {fileID: 11500000, guid: c106759c622c0774ab94c61fd62317fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

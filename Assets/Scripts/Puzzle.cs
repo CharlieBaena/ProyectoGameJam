@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Puzzle : MonoBehaviour
 {
@@ -9,11 +10,14 @@ public class Puzzle : MonoBehaviour
     public GameObject bordePrefab; //borde basico del cual se crearan el resto
     public Sprite fichaEscondidaImg; //Para guarda imagen de la ficha que no se va a ver
     public GameObject textoGanador; //Texto cuando se complete el puzzle
+    public bool dificultadFacil = true;
 
     [HideInInspector]
+    public bool puzzleResuelto = false;
+    [HideInInspector]
     public GameObject fichaEscondida; //objeto de la ficha escondida
-
-    private int numCostado; //el numero de fichas por lado
+    [HideInInspector]
+    public int numCostado; //el numero de fichas por lado
     private GameObject padreFichas; //para organizar la escena
     private GameObject padreBordes; //para organizar la escena
     private List<Vector3> posicionesIniciales = new List<Vector3>(); //donde se almacenaran las posiciones iniciales, para comparar luego si se ha hecho bien
@@ -25,8 +29,7 @@ public class Puzzle : MonoBehaviour
     private void Awake(){
         //buscamos los objetos que nos almacenaran las fichas y los bordes
         padreFichas = GameObject.Find("Fichas");
-        padreBordes = GameObject.Find("Bordes");
-        print(padreBordes.transform.position);
+        padreBordes = GameObject.Find("Bordes");    
     }
 
 
@@ -43,35 +46,27 @@ public class Puzzle : MonoBehaviour
         numCostado = (int)Mathf.Sqrt(fichaImg.Count);
 
         //Doble bucle para colocar todas las fichas en su sitio
-        print("antes de entrar");
         for (int alto = numCostado + 2; alto > 0; alto--){
             for (int ancho = 0; ancho < numCostado + 2; ancho++){
-                
-                Vector3 posicion = new Vector3(ancho - (numCostado / 2), alto - (numCostado / 2), 0); //posicion de cada ficha
-                print(posicion);
+
+                Vector3 posicion = new Vector3(ancho - (numCostado / 2), alto - (numCostado / 2), 0);// +offset; //posicion de cada ficha
+               
                 //comprobar si son posiciones de borde o de fichas
                 if (alto == 1 || alto == numCostado + 2 || ancho == 0 || ancho == numCostado +1) {  //creando el borde
                     
                     GameObject borde = Instantiate(bordePrefab, posicion, Quaternion.identity);     //instanciamos el borde
-                    print("Antes de asignar al padre" + posicion);
-                    borde.transform.parent = padreBordes.transform;                                 //lo ponemos como hijo de padreBordes
-                    print("Despues de asignar al padre" + borde.transform.position);
-
-                    print("borde creado");
+                    borde.transform.parent = padreBordes.transform;       
 
                 } else {                                                                            //creando las fichas del puzzle
 
                     GameObject ficha = Instantiate(fichaPrefab, posicion, Quaternion.identity);     //instanciamos la ficha
                     ficha.GetComponent<SpriteRenderer>().sprite = fichaImg[contador];               //asignamos el sprite de cada ficha
-                    print("Antes de asignar al padre" + posicion);
                     ficha.transform.parent = padreFichas.transform;                                 //lo ponemos como hijo de padreFichas
-                    print("Despues de asignar al padre" + ficha.transform.position);
+                    //print(contador.ToString() + ficha.transform.position);
                     ficha.name = fichaImg[contador].name;                                           //dejamos el mismo nombre que el sprite
                     if (ficha.name == fichaEscondidaImg.name)                                       //Si es la ficha que tenemos que esconder
                         fichaEscondida = ficha;                                                     //la asignamos
                     contador++;
-
-                    print("ficha creado");
 
                 }
             }
@@ -109,11 +104,29 @@ public class Puzzle : MonoBehaviour
                 return;                                                                             //tenga la misma posicion que la inicial, salimos de la funcion
         }
 
+
         fichaEscondida.gameObject.SetActive(true);
-        print("Puzzle resuelto!");
-        textoGanador.gameObject.SetActive(true);
+       
+        //print("Puzzle resuelto!");
+        puzzleResuelto = true;
+        //textoGanador.gameObject.SetActive(true);
+        StartCoroutine(PauseGame(30));
+       
+
+    IEnumerator PauseGame(float pauseTime)
+    {
+        Debug.Log("Inside PauseGame()");
+        Time.timeScale = 0f;
+        float pauseEndTime = Time.realtimeSinceStartup + pauseTime;
+        while (Time.realtimeSinceStartup < pauseEndTime)
+        {
+            yield return 0;
+        }
+        Time.timeScale = 1f;
+        Debug.Log("Done with my pause");
+        SceneManager.LoadScene("InterfazDePuzzle");
+        }
     }
 
 
-    
 }
