@@ -10,8 +10,9 @@ public class Puzzle : MonoBehaviour
     public GameObject bordePrefab; //borde basico del cual se crearan el resto
     public Sprite fichaEscondidaImg; //Para guarda imagen de la ficha que no se va a ver
     public GameObject textoGanador; //Texto cuando se complete el puzzle
-    public bool dificultadFacil = true;
 
+    [HideInInspector]
+    public bool dificultadFacil = true;
     [HideInInspector]
     public bool puzzleResuelto = false;
     [HideInInspector]
