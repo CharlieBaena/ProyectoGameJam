@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class Puzzle : MonoBehaviour
 {
@@ -9,7 +10,7 @@ public class Puzzle : MonoBehaviour
     public GameObject bordePrefab; //borde basico del cual se crearan el resto
     public Sprite fichaEscondidaImg; //Para guarda imagen de la ficha que no se va a ver
     public GameObject textoGanador; //Texto cuando se complete el puzzle
-    public bool dificultadFacil = false;
+    public bool dificultadFacil = true;
 
     [HideInInspector]
     public bool puzzleResuelto = false;
@@ -105,14 +106,14 @@ public class Puzzle : MonoBehaviour
 
 
         fichaEscondida.gameObject.SetActive(true);
-        //StartCoroutine(PauseGame(30));
+       
         //print("Puzzle resuelto!");
         puzzleResuelto = true;
         //textoGanador.gameObject.SetActive(true);
+        StartCoroutine(PauseGame(30));
+       
 
-    }
-
-    /*public IEnumerator PauseGame(float pauseTime)
+    IEnumerator PauseGame(float pauseTime)
     {
         Debug.Log("Inside PauseGame()");
         Time.timeScale = 0f;
@@ -123,7 +124,9 @@ public class Puzzle : MonoBehaviour
         }
         Time.timeScale = 1f;
         Debug.Log("Done with my pause");
-    }*/
+        SceneManager.LoadScene("InterfazDePuzzle");
+        }
+    }
 
 
 }
