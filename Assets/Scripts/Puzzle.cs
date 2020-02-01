@@ -12,8 +12,8 @@ public class Puzzle : MonoBehaviour
 
     [HideInInspector]
     public GameObject fichaEscondida; //objeto de la ficha escondida
-
-    private int numCostado; //el numero de fichas por lado
+    [HideInInspector]
+    public int numCostado; //el numero de fichas por lado
     private GameObject padreFichas; //para organizar la escena
     private GameObject padreBordes; //para organizar la escena
     private List<Vector3> posicionesIniciales = new List<Vector3>(); //donde se almacenaran las posiciones iniciales, para comparar luego si se ha hecho bien
@@ -25,8 +25,7 @@ public class Puzzle : MonoBehaviour
     private void Awake(){
         //buscamos los objetos que nos almacenaran las fichas y los bordes
         padreFichas = GameObject.Find("Fichas");
-        padreBordes = GameObject.Find("Bordes");
-        print(padreBordes.transform.position);
+        padreBordes = GameObject.Find("Bordes");    
     }
 
 
@@ -43,35 +42,27 @@ public class Puzzle : MonoBehaviour
         numCostado = (int)Mathf.Sqrt(fichaImg.Count);
 
         //Doble bucle para colocar todas las fichas en su sitio
-        print("antes de entrar");
         for (int alto = numCostado + 2; alto > 0; alto--){
             for (int ancho = 0; ancho < numCostado + 2; ancho++){
                 
                 Vector3 posicion = new Vector3(ancho - (numCostado / 2), alto - (numCostado / 2), 0); //posicion de cada ficha
-                print(posicion);
+                //print(posicion);
                 //comprobar si son posiciones de borde o de fichas
                 if (alto == 1 || alto == numCostado + 2 || ancho == 0 || ancho == numCostado +1) {  //creando el borde
                     
                     GameObject borde = Instantiate(bordePrefab, posicion, Quaternion.identity);     //instanciamos el borde
-                    print("Antes de asignar al padre" + posicion);
-                    borde.transform.parent = padreBordes.transform;                                 //lo ponemos como hijo de padreBordes
-                    print("Despues de asignar al padre" + borde.transform.position);
-
-                    print("borde creado");
+                    borde.transform.parent = padreBordes.transform;       
 
                 } else {                                                                            //creando las fichas del puzzle
 
                     GameObject ficha = Instantiate(fichaPrefab, posicion, Quaternion.identity);     //instanciamos la ficha
                     ficha.GetComponent<SpriteRenderer>().sprite = fichaImg[contador];               //asignamos el sprite de cada ficha
-                    print("Antes de asignar al padre" + posicion);
                     ficha.transform.parent = padreFichas.transform;                                 //lo ponemos como hijo de padreFichas
-                    print("Despues de asignar al padre" + ficha.transform.position);
+                    //print(contador.ToString() + ficha.transform.position);
                     ficha.name = fichaImg[contador].name;                                           //dejamos el mismo nombre que el sprite
                     if (ficha.name == fichaEscondidaImg.name)                                       //Si es la ficha que tenemos que esconder
                         fichaEscondida = ficha;                                                     //la asignamos
                     contador++;
-
-                    print("ficha creado");
 
                 }
             }

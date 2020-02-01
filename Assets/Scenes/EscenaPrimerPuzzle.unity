@@ -366,12 +366,13 @@ MonoBehaviour:
   - {fileID: -460061759008372614, guid: 3551f9c0a573ab34b8e34afc2b213990, type: 3}
   fichaPrefab: {fileID: 8173507299562568335, guid: 3e62d49aea064c84081e9f149f9f6f2b,
     type: 3}
-  bordePrefab: {fileID: 1453961047014854, guid: 6661eeb5052973148962456ac553fe2b,
+  bordePrefab: {fileID: 7948465901599154172, guid: 2baa755f07127f843a06c1dabdcca4b0,
     type: 3}
   fichaEscondidaImg: {fileID: -9142642688764400863, guid: 3551f9c0a573ab34b8e34afc2b213990,
     type: 3}
   textoGanador: {fileID: 1275207382}
   fichaEscondida: {fileID: 0}
+  numCostado: 0
 --- !u!114 &801863697
 MonoBehaviour:
   m_ObjectHideFlags: 0
