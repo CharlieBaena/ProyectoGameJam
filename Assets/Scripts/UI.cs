@@ -8,7 +8,7 @@ public class UI : MonoBehaviour
     Text numMovimientosTxt;
     int numMovimientos;
 
-    private void Awake(){
+    /*private void Awake(){
         numMovimientosTxt = GameObject.Find("TextoMovimientos").GetComponent(typeof(Text)) as Text;
     }
 
@@ -16,5 +16,5 @@ public class UI : MonoBehaviour
     {
         numMovimientos += 1;
         numMovimientosTxt.text = "Movimientos: " + numMovimientos.ToString();
-    }
+    }*/
 }

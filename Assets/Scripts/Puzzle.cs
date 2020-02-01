@@ -9,7 +9,10 @@ public class Puzzle : MonoBehaviour
     public GameObject bordePrefab; //borde basico del cual se crearan el resto
     public Sprite fichaEscondidaImg; //Para guarda imagen de la ficha que no se va a ver
     public GameObject textoGanador; //Texto cuando se complete el puzzle
+    public bool dificultadFacil = false;
 
+    [HideInInspector]
+    public bool puzzleResuelto = false;
     [HideInInspector]
     public GameObject fichaEscondida; //objeto de la ficha escondida
     [HideInInspector]
@@ -44,9 +47,9 @@ public class Puzzle : MonoBehaviour
         //Doble bucle para colocar todas las fichas en su sitio
         for (int alto = numCostado + 2; alto > 0; alto--){
             for (int ancho = 0; ancho < numCostado + 2; ancho++){
-                
-                Vector3 posicion = new Vector3(ancho - (numCostado / 2), alto - (numCostado / 2), 0); //posicion de cada ficha
-                //print(posicion);
+
+                Vector3 posicion = new Vector3(ancho - (numCostado / 2), alto - (numCostado / 2), 0);// +offset; //posicion de cada ficha
+               
                 //comprobar si son posiciones de borde o de fichas
                 if (alto == 1 || alto == numCostado + 2 || ancho == 0 || ancho == numCostado +1) {  //creando el borde
                     
@@ -100,11 +103,27 @@ public class Puzzle : MonoBehaviour
                 return;                                                                             //tenga la misma posicion que la inicial, salimos de la funcion
         }
 
+
         fichaEscondida.gameObject.SetActive(true);
-        print("Puzzle resuelto!");
-        textoGanador.gameObject.SetActive(true);
+        //StartCoroutine(PauseGame(30));
+        //print("Puzzle resuelto!");
+        puzzleResuelto = true;
+        //textoGanador.gameObject.SetActive(true);
+
     }
 
+    /*public IEnumerator PauseGame(float pauseTime)
+    {
+        Debug.Log("Inside PauseGame()");
+        Time.timeScale = 0f;
+        float pauseEndTime = Time.realtimeSinceStartup + pauseTime;
+        while (Time.realtimeSinceStartup < pauseEndTime)
+        {
+            yield return 0;
+        }
+        Time.timeScale = 1f;
+        Debug.Log("Done with my pause");
+    }*/
 
-    
+
 }
