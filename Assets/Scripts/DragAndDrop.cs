@@ -4,81 +4,87 @@ using UnityEngine;
 
 public class DragAndDrop : MonoBehaviour
 {
-    Vector3 posInicial;
-    //Sensores sensores;
-    Puzzle puzzle;
-    //UI ui;
-    bool puedoMover = false;
+    Vector3 screenSpace, offset, posInicial;
+    Sensores sensores;
+     Puzzle puzzle;
+    bool moviendoLeft, moviendoRight, moviendoUp, moviendoDown;
+     UI ui;
 
 
     private void Awake(){
-        //sensores = GetComponentInChildren(typeof(Sensores)) as Sensores;
+        sensores = GetComponentInChildren(typeof(Sensores)) as Sensores;
         puzzle = GameObject.Find("Scripts").GetComponent(typeof(Puzzle)) as Puzzle;
-        //ui = GameObject.Find("Scripts").GetComponent(typeof(UI)) as UI;
+        ui = GameObject.Find("Scripts").GetComponent(typeof(UI)) as UI;
     }
 
     private void OnMouseDown(){
+        screenSpace = Camera.main.WorldToScreenPoint(transform.position);
+        offset = transform.position - Camera.main.ScreenToWorldPoint(new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0));
+        posInicial = transform.position;
+    }
 
-        //Comprobar que esta la ficha vacia adyacente
-        if (!puzzle.puzzleResuelto)
-        {
-            if (puzzle.dificultadFacil)
-            {
-                CambiarPosicion();
-                puedoMover = true;
-            }
-            else
-            {
-                Vector3 posBase = new Vector3(transform.position.x, transform.position.y, 0);
+    private void OnMouseDrag()
+    {
+        Vector3 posicion = new Vector3(Input.mousePosition.x, Input.mousePosition.y, 0);
+        Vector3 curScreenSpace = posicion;
+        Vector3 curPosition = Camera.main.ScreenToWorldPoint(curScreenSpace) + offset;
 
-                if ((puzzle.fichaEscondida.transform.position.x == posBase.x - 1) && (puzzle.fichaEscondida.transform.position.y == posBase.y))
-                {
-                    puedoMover = true;
-                    CambiarPosicion();
-                }
-                if ((puzzle.fichaEscondida.transform.position.x == posBase.x + 1) && (puzzle.fichaEscondida.transform.position.y == posBase.y))
-                {
-                    puedoMover = true;
-                    CambiarPosicion();
-                }
-                if ((puzzle.fichaEscondida.transform.position.x == posBase.x) && (puzzle.fichaEscondida.transform.position.y == posBase.y - 1))
-                {
-                    puedoMover = true;
-                    CambiarPosicion();
-                }
-                if ((puzzle.fichaEscondida.transform.position.x == posBase.x) && (puzzle.fichaEscondida.transform.position.y == posBase.y + 1))
-                {
-                    puedoMover = true;
-                    CambiarPosicion();
-                }
-            }
+        if (!sensores.ocupadoLeft || !sensores.ocupadoRight){                                   //movimiento horizontal
+            curPosition = new Vector3(curPosition.x, transform.position.y, 0);
+            if (!sensores.ocupadoLeft && !moviendoLeft && !moviendoRight)
+                moviendoLeft = true;
+            if (!sensores.ocupadoRight && !moviendoLeft && !moviendoRight)
+                moviendoRight = true;
+        }else if(!sensores.ocupadoUp || !sensores.ocupadoDown) {
+            curPosition = new Vector3(transform.position.x, curPosition.y, 0);                  //movimiento vertical
+            if (!sensores.ocupadoUp && !moviendoUp && !moviendoDown)
+                moviendoUp = true;
+            if (!sensores.ocupadoDown && !moviendoDown && !moviendoUp)
+                moviendoDown = true;
+        } else {
+            return;
         }
-       // Vector3 posVacia = transform.position;
-        //transform.position = puzzle.fichaEscondida.transform.position;
-        //puzzle.fichaEscondida.transform.position = posVacia;
+
+        //proteger los movimientos hacia la direccion correcta
+
+        if (moviendoLeft) {
+            if (curPosition.x > posInicial.x)
+                return;
+        }
+
+        if (moviendoRight) {
+            if (curPosition.x < posInicial.x)
+                return;
+        }
+
+        if (moviendoUp) {
+            if (curPosition.y > posInicial.y)
+                return;
+        }
+
+        if (moviendoDown) {
+            if (curPosition.y < posInicial.y)
+                return;
+        }
+
+        if (Vector3.Distance(curPosition, posInicial) > 1) return;                          //Restringir movimiento a 1 de distancia como maximo
+
+
+        transform.position = curPosition;
     }
 
     private void OnMouseUp(){
 
-        if (puedoMover)
+        if (transform.position != posInicial)
         {
-            transform.position = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), 0);
-
-            if (transform.position != posInicial)
-            {
-                //ui.SumarMovimiento();
-                puzzle.ComprobarGanador();
-            }
-
-            transform.position = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), 0);
-            puedoMover = false;
+            ui.SumarMovimiento();
+            puzzle.ComprobarGanador();
         }
-    }
-
-    void CambiarPosicion()
-    {
-        Vector3 posVacia = transform.position;
-        transform.position = puzzle.fichaEscondida.transform.position;
-        puzzle.fichaEscondida.transform.position = posVacia;
+        
+        transform.position = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), 0);
+        moviendoLeft = false;
+        moviendoRight = false;
+        moviendoUp = false;
+        moviendoDown = false;
     }
 }

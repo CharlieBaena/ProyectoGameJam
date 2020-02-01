@@ -18,11 +18,11 @@ public class VideoFondo : MonoBehaviour
     IEnumerator PlayVideo()
     {
         videoPlayer.Prepare();
-        WaitForSeconds waitForSeconds = new WaitForSeconds(1);
+       WaitForSeconds waitForSeconds = new WaitForSeconds(1);
         while (!videoPlayer.isPrepared)
         {
-            yield return waitForSeconds;
-            break;
+           yield return waitForSeconds;
+           break;
         }
         rawImage.texture = videoPlayer.texture;
         videoPlayer.Play();

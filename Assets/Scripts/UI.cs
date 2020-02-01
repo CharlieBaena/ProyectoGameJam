@@ -1,20 +1,14 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 public class UI : MonoBehaviour
 {
+    Text numMovimientosTxt;
+    int numMovimientos;
 
-    public void BotonVolver()
-    {
-        SceneManager.LoadScene("InterfazDePuzzle");
-    }
-    /*Text numMovimientosTxt;
-    int numMovimientos;*/
-
-    /*private void Awake(){
+    private void Awake(){
         numMovimientosTxt = GameObject.Find("TextoMovimientos").GetComponent(typeof(Text)) as Text;
     }
 
@@ -22,5 +16,5 @@ public class UI : MonoBehaviour
     {
         numMovimientos += 1;
         numMovimientosTxt.text = "Movimientos: " + numMovimientos.ToString();
-    }*/
+    }
 }
