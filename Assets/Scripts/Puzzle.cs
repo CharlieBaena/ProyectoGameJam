@@ -11,11 +11,14 @@ public class Puzzle : MonoBehaviour
     public GameObject textoGanador; //Texto cuando se complete el puzzle
 
     [HideInInspector]
+<<<<<<< HEAD
     public bool dificultadFacil = true;
     [HideInInspector]
     public bool puzzleResuelto = false;
     [HideInInspector]
 
+=======
+>>>>>>> parent of 4de87e0... Merge branch 'master' of https://github.com/CharlieBaena/ProyectoGameJam
     public GameObject fichaEscondida; //objeto de la ficha escondida
 
     private int numCostado; //el numero de fichas por lado
