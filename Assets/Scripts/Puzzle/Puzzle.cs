@@ -112,9 +112,9 @@ public class Puzzle : MonoBehaviour
 
         //print("Puzzle resuelto!");
         puzzleResuelto = true;
-        print(MenuPuzzles.puzzlesResueltos);
+        //print(MenuPuzzles.puzzlesResueltos);
         MenuPuzzles.puzzlesResueltos++;
-        print(MenuPuzzles.puzzlesResueltos);
+        //print(MenuPuzzles.puzzlesResueltos);
 
         StartCoroutine(GetComponent<StreamVideoPuzzle>().PlayVideo());
         StartCoroutine(CambiarEscena(12));

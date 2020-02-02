@@ -10,7 +10,6 @@ public class StreamVideoPuzzle : MonoBehaviour
     public VideoPlayer videoPlayer;
 
     public IEnumerator PlayVideo() {
-        print("entro");
         videoPlayer.Prepare();
         WaitForSeconds waitForSeconds = new WaitForSeconds(1);
         while (!videoPlayer.isPrepared) {
