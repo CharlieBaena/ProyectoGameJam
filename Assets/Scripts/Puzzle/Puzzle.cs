@@ -112,8 +112,9 @@ public class Puzzle : MonoBehaviour
 
         //print("Puzzle resuelto!");
         puzzleResuelto = true;
+
+        StartCoroutine(GetComponent<StreamVideo>().PlayVideo());
         StartCoroutine(CambiarEscena(12));
-        //StartCoroutine(reproductor.PlayVideo());
     }
 
     IEnumerator CambiarEscena(float pauseTime) {

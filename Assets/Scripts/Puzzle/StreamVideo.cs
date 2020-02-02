@@ -17,7 +17,7 @@ public class StreamVideo : MonoBehaviour
         StartCoroutine(PlayVideo());
     }*/
 
-    private void Awake()
+    /*private void Awake()
     {
         puzzle = GameObject.Find("Scripts").GetComponent(typeof(Puzzle)) as Puzzle;
     }
@@ -27,7 +27,7 @@ public class StreamVideo : MonoBehaviour
         print(puzzle.puzzleResuelto);
         if(puzzle.puzzleResuelto)
             StartCoroutine("PlayVideo");
-    }
+    }*/
 
     public IEnumerator PlayVideo() {
         print("entro");
