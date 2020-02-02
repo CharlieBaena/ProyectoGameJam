@@ -5,16 +5,12 @@ using UnityEngine;
 public class DragAndDrop : MonoBehaviour
 {
     Vector3 posInicial;
-    //Sensores sensores;
     Puzzle puzzle;
-    //UI ui;
     bool puedoMover = false;
 
 
     private void Awake(){
-        //sensores = GetComponentInChildren(typeof(Sensores)) as Sensores;
         puzzle = GameObject.Find("Scripts").GetComponent(typeof(Puzzle)) as Puzzle;
-        //ui = GameObject.Find("Scripts").GetComponent(typeof(UI)) as UI;
     }
 
     private void OnMouseDown(){
@@ -53,9 +49,6 @@ public class DragAndDrop : MonoBehaviour
                 }
             }
         }
-       // Vector3 posVacia = transform.position;
-        //transform.position = puzzle.fichaEscondida.transform.position;
-        //puzzle.fichaEscondida.transform.position = posVacia;
     }
 
     private void OnMouseUp(){
@@ -66,7 +59,6 @@ public class DragAndDrop : MonoBehaviour
 
             if (transform.position != posInicial)
             {
-                //ui.SumarMovimiento();
                 puzzle.ComprobarGanador();
             }
 

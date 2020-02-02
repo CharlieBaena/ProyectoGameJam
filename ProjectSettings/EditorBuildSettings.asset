@@ -15,7 +15,7 @@ EditorBuildSettings:
     path: Assets/Scenes/InterfazDePuzzle.unity
     guid: c12c4444fa3f3a543a44afee3f24457e
   - enabled: 1
-    path: Assets/Scenes/EscenaPrimerPuzzle.unity
+    path: Assets/Scenes/EscenaSegundoPuzzle.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/InterfazDePuzzle.unity

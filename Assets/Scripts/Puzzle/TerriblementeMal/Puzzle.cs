@@ -9,7 +9,6 @@ public class Puzzle : MonoBehaviour
     public GameObject fichaPrefab; //ficha basica de la cual se crearan el resto
     public GameObject bordePrefab; //borde basico del cual se crearan el resto
     public Sprite fichaEscondidaImg; //Para guarda imagen de la ficha que no se va a ver
-    public GameObject textoGanador; //Texto cuando se complete el puzzle
     public bool dificultadFacil = true;
 
     [HideInInspector]
@@ -109,7 +108,6 @@ public class Puzzle : MonoBehaviour
        
         //print("Puzzle resuelto!");
         puzzleResuelto = true;
-        //textoGanador.gameObject.SetActive(true);
         StartCoroutine(PauseGame(30));
        
 
