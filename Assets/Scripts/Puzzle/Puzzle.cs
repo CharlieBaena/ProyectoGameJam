@@ -24,7 +24,7 @@ public class Puzzle : MonoBehaviour
     private GameObject padreBordes; //para organizar la escena
     private List<Vector3> posicionesIniciales = new List<Vector3>(); //donde se almacenaran las posiciones iniciales, para comparar luego si se ha hecho bien
     private GameObject[] arrayFichas; //donde almacenaremos nuestras fichas
-    private StreamVideo reproductor;
+    //private StreamVideo reproductor = new StreamVideo();
 
 
 
@@ -32,7 +32,7 @@ public class Puzzle : MonoBehaviour
         //buscamos los objetos que nos almacenaran las fichas y los bordes
         padreFichas = GameObject.Find("Fichas");
         padreBordes = GameObject.Find("Bordes");  
-        reproductor = GameObject.Find("Scripts").GetComponent(typeof(StreamVideo)) as StreamVideo;
+        //reproductor = GameObject.Find("Scripts").GetComponent(typeof(StreamVideo)) as StreamVideo;
     }
 
 
@@ -112,12 +112,13 @@ public class Puzzle : MonoBehaviour
 
         //print("Puzzle resuelto!");
         puzzleResuelto = true;
-        StartCoroutine(CambiarEscena(10));
+        StartCoroutine(CambiarEscena(12));
+        //StartCoroutine(reproductor.PlayVideo());
     }
 
     IEnumerator CambiarEscena(float pauseTime) {
 
-        reproductor.PlayVideo();
+        
         Time.timeScale = 0f;
         float pauseEndTime = Time.realtimeSinceStartup + pauseTime;
         while (Time.realtimeSinceStartup < pauseEndTime)
