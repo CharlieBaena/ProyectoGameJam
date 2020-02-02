@@ -437,11 +437,11 @@ RectTransform:
   m_Father: {fileID: 1139980072}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 620, y: -349.09}
-  m_SizeDelta: {x: 151.1, y: 53.5}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 1, y: 0}
+  m_AnchorMax: {x: 1, y: 0}
+  m_AnchoredPosition: {x: -74.2, y: 84}
+  m_SizeDelta: {x: 151.09998, y: 53.5}
+  m_Pivot: {x: 1, y: 0}
 --- !u!114 &790918192
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -576,20 +576,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fichaImg:
-  - {fileID: 7901316602297078717, guid: c10cec9a7ffe25244bb7d10dfcbf5da2, type: 3}
-  - {fileID: 5156893080604596480, guid: c10cec9a7ffe25244bb7d10dfcbf5da2, type: 3}
-  - {fileID: -5748133036426684003, guid: c10cec9a7ffe25244bb7d10dfcbf5da2, type: 3}
-  - {fileID: -4005420873456868128, guid: c10cec9a7ffe25244bb7d10dfcbf5da2, type: 3}
-  - {fileID: 992039876181379530, guid: c10cec9a7ffe25244bb7d10dfcbf5da2, type: 3}
-  - {fileID: -8147681090011485127, guid: c10cec9a7ffe25244bb7d10dfcbf5da2, type: 3}
-  - {fileID: 4132925281183527843, guid: c10cec9a7ffe25244bb7d10dfcbf5da2, type: 3}
-  - {fileID: 5534249643226801275, guid: c10cec9a7ffe25244bb7d10dfcbf5da2, type: 3}
-  - {fileID: 7120823193116921013, guid: c10cec9a7ffe25244bb7d10dfcbf5da2, type: 3}
+  - {fileID: -4064843889545375481, guid: aa0fc986e9cc775448c52a94ed6db381, type: 3}
+  - {fileID: -9007677531358266325, guid: aa0fc986e9cc775448c52a94ed6db381, type: 3}
+  - {fileID: -5313490996044796795, guid: aa0fc986e9cc775448c52a94ed6db381, type: 3}
+  - {fileID: -5740343298984622782, guid: aa0fc986e9cc775448c52a94ed6db381, type: 3}
+  - {fileID: -2786340046821428927, guid: aa0fc986e9cc775448c52a94ed6db381, type: 3}
+  - {fileID: 8827982679385810793, guid: aa0fc986e9cc775448c52a94ed6db381, type: 3}
+  - {fileID: 1234324263804459852, guid: aa0fc986e9cc775448c52a94ed6db381, type: 3}
+  - {fileID: -3519913444622747656, guid: aa0fc986e9cc775448c52a94ed6db381, type: 3}
+  - {fileID: 8251584340741821635, guid: aa0fc986e9cc775448c52a94ed6db381, type: 3}
   fichaPrefab: {fileID: 8173507299562568335, guid: 3e62d49aea064c84081e9f149f9f6f2b,
     type: 3}
   bordePrefab: {fileID: 7948465901599154172, guid: 2baa755f07127f843a06c1dabdcca4b0,
     type: 3}
-  fichaEscondidaImg: {fileID: 7120823193116921013, guid: c10cec9a7ffe25244bb7d10dfcbf5da2,
+  fichaEscondidaImg: {fileID: 8251584340741821635, guid: aa0fc986e9cc775448c52a94ed6db381,
     type: 3}
   dificultadFacil: 0
   puzzleResuelto: 0
@@ -702,11 +702,11 @@ RectTransform:
   m_Father: {fileID: 1139980072}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0.5, y: 0.5}
-  m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -668.77966, y: -349.09}
-  m_SizeDelta: {x: 32.15, y: 32.17}
-  m_Pivot: {x: 0.5, y: 0.5}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 0, y: 0}
+  m_AnchoredPosition: {x: 74.2, y: 84}
+  m_SizeDelta: {x: 32.150024, y: 32.169983}
+  m_Pivot: {x: 0, y: 0}
 --- !u!114 &1043389085
 MonoBehaviour:
   m_ObjectHideFlags: 0
