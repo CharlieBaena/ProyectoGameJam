@@ -13,19 +13,8 @@ public class Puzzle : MonoBehaviour
     public bool dificultadFacil = true;
 
     [HideInInspector]
-<<<<<<< HEAD
-<<<<<<< HEAD
-    public bool dificultadFacil = true;
-    [HideInInspector]
     public bool puzzleResuelto = false;
     [HideInInspector]
-
-=======
->>>>>>> parent of 4de87e0... Merge branch 'master' of https://github.com/CharlieBaena/ProyectoGameJam
-=======
-    public bool puzzleResuelto = false;
-    [HideInInspector]
->>>>>>> parent of cf7b9f9... Revert "Merge branch 'master' of https://github.com/CharlieBaena/ProyectoGameJam"
     public GameObject fichaEscondida; //objeto de la ficha escondida
     [HideInInspector]
     public int numCostado; //el numero de fichas por lado
