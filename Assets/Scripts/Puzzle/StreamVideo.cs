@@ -8,6 +8,7 @@ public class StreamVideo : MonoBehaviour
 {
     public RawImage fondo;
     public VideoPlayer videoPlayer;
+    public AudioSource audioSource;
 
     Puzzle puzzle;
     //public AudioSource audioSource;
@@ -40,7 +41,8 @@ public class StreamVideo : MonoBehaviour
         fondo.texture = videoPlayer.texture;
         fondo.gameObject.SetActive(true);
         videoPlayer.Play();
-        //audioSource.Play();
+        if(audioSource!=null)
+            audioSource.Play();
     }
 
 
