@@ -14,9 +14,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/InterfazDePuzzle.unity
     guid: c12c4444fa3f3a543a44afee3f24457e
-  - enabled: 1
-    path: Assets/Scenes/EscenaSegundoPuzzle.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
     path: Assets/Scenes/InterfazDePuzzle.unity
     guid: c12c4444fa3f3a543a44afee3f24457e
@@ -26,4 +26,58 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/MenuPrincipal.unity
     guid: 62876584ca32cbb49b87ccda2137112e
+  - enabled: 1
+    path: Assets/Scenes/CinematicaPrincipio.unity
+    guid: b7d8a40012fc5874ab4d4e032d572937
+  - enabled: 1
+    path: Assets/Scenes/EscenaCuartoPuzzle.unity
+    guid: 4ee38d0ea20dc594d8f9558591e80341
+  - enabled: 1
+    path: "Assets/Scenes/EscenaCuartoPuzzleEspa\xF1ol.unity"
+    guid: 01edb0178e9717b4f8681238caa76e25
+  - enabled: 1
+    path: Assets/Scenes/EscenaPrimerPuzzle.unity
+    guid: 031947872b71eac49b9cd28f1c37e109
+  - enabled: 1
+    path: "Assets/Scenes/EscenaPrimerPuzzleEspa\xF1ol.unity"
+    guid: 993bbe247b3f61041b67569856daa0ba
+  - enabled: 1
+    path: Assets/Scenes/EscenaQuintoPuzzle.unity
+    guid: ffc9e978cce49614ba66a7d4c6e4837d
+  - enabled: 1
+    path: "Assets/Scenes/EscenaQuintoPuzzleEspa\xF1ol.unity"
+    guid: 518297ea305ed9741b3af6d90c1c8ae1
+  - enabled: 1
+    path: Assets/Scenes/EscenaSegundoPuzzle.unity
+    guid: acaa1789d3e41e3429d72102b96e8ce1
+  - enabled: 1
+    path: "Assets/Scenes/EscenaSegundoPuzzleEspa\xF1ol.unity"
+    guid: d1b70a3c1615cd14bb7ba826f938ebd8
+  - enabled: 1
+    path: "Assets/Scenes/EscenaSeptimaPuzzleEspa\xF1ol.unity"
+    guid: f0edf0d19ab4aee42bf1f6604d78f92c
+  - enabled: 1
+    path: Assets/Scenes/EscenaSextoPuzzle.unity
+    guid: 4882f7ec67fa17142b999f384aa0b0db
+  - enabled: 1
+    path: "Assets/Scenes/EscenaSextoPuzzleEspa\xF1ol.unity"
+    guid: 05af97a9ffbb7ce4c9be38fcb3b4c5eb
+  - enabled: 1
+    path: Assets/Scenes/EscenaTercerPuzzle.unity
+    guid: 5df97d4f21236cb4d98c26083dce84c3
+  - enabled: 1
+    path: "Assets/Scenes/EscenaTercerPuzzleEspa\xF1ol.unity"
+    guid: 4b2e7566611cdcd4980ebb7a0f44756c
+  - enabled: 1
+    path: "Assets/Scenes/InterfazDePuzzleEspa\xF1ol.unity"
+    guid: 31f06afb4ad09aa46b03e79db81239b8
+  - enabled: 1
+    path: "Assets/Scenes/MenuOpcionesEspa\xF1ol.unity"
+    guid: a756b59f202ca234d8543d8c7406ceca
+  - enabled: 1
+    path: "Assets/Scenes/MenuPrincipalEspa\xF1ol.unity"
+    guid: b39e55ea000dea64aa799cf69ce82f00
+  - enabled: 1
+    path: Assets/Scenes/EscenaSeptimaPuzzle.unity
+    guid: 1184440a82ce8b144b25457b96539e54
   m_configObjects: {}
