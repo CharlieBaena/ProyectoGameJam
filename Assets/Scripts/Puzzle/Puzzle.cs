@@ -3,32 +3,36 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class Puzzle : MonoBehaviour
 {
     public List<Sprite> fichaImg = new List<Sprite>();  //lista donde almacenará los sprites cortados de cada ficha
     public GameObject fichaPrefab; //ficha basica de la cual se crearan el resto
     public GameObject bordePrefab; //borde basico del cual se crearan el resto
     public Sprite fichaEscondidaImg; //Para guarda imagen de la ficha que no se va a ver
-    public bool dificultadFacil = true;
 
+    [HideInInspector]
+    public bool dificultadFacil = true;
     [HideInInspector]
     public bool puzzleResuelto = false;
     [HideInInspector]
     public GameObject fichaEscondida; //objeto de la ficha escondida
     [HideInInspector]
     public int numCostado; //el numero de fichas por lado
+
     private GameObject padreFichas; //para organizar la escena
     private GameObject padreBordes; //para organizar la escena
     private List<Vector3> posicionesIniciales = new List<Vector3>(); //donde se almacenaran las posiciones iniciales, para comparar luego si se ha hecho bien
     private GameObject[] arrayFichas; //donde almacenaremos nuestras fichas
-
+    private StreamVideo reproductor;
 
 
 
     private void Awake() {
         //buscamos los objetos que nos almacenaran las fichas y los bordes
         padreFichas = GameObject.Find("Fichas");
-        padreBordes = GameObject.Find("Bordes");    
+        padreBordes = GameObject.Find("Bordes");  
+        reproductor = GameObject.Find("Scripts").GetComponent(typeof(StreamVideo)) as StreamVideo;
     }
 
 
@@ -97,7 +101,7 @@ public class Puzzle : MonoBehaviour
 
 
     public void ComprobarGanador() {
-        for(int i = 0; i < arrayFichas.Length; i++)
+        for (int i = 0; i < arrayFichas.Length; i++)
         {
             if (posicionesIniciales[i] != arrayFichas[i].transform.position)                        //repasamos las posiciones actuales y con que una ya no
                 return;                                                                             //tenga la misma posicion que la inicial, salimos de la funcion
@@ -105,14 +109,15 @@ public class Puzzle : MonoBehaviour
 
 
         fichaEscondida.gameObject.SetActive(true);
-       
+
         //print("Puzzle resuelto!");
         puzzleResuelto = true;
         StartCoroutine(CambiarEscena(10));
-       
+    }
 
     IEnumerator CambiarEscena(float pauseTime) {
-        Debug.Log("Inside PauseGame()");
+
+        reproductor.PlayVideo();
         Time.timeScale = 0f;
         float pauseEndTime = Time.realtimeSinceStartup + pauseTime;
         while (Time.realtimeSinceStartup < pauseEndTime)
@@ -120,9 +125,8 @@ public class Puzzle : MonoBehaviour
             yield return 0;
         }
         Time.timeScale = 1f;
-        Debug.Log("Done with my pause");
         SceneManager.LoadScene("InterfazDePuzzle");
-        }
+        
     }
 
 
