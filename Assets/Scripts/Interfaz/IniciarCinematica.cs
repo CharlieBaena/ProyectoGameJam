@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 using UnityEngine.Video;
 
@@ -26,5 +27,11 @@ public class IniciarCinematica : MonoBehaviour
         fondo.texture = videoPlayer.texture;
         videoPlayer.Play();
         audioSource.Play();
+        while (videoPlayer.isPlaying)
+        {
+            yield return waitForSeconds;
+            break;
+        }
+        //SceneManager.LoadScene("InterfazDePuzzle");
     }
 }
