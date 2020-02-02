@@ -113,7 +113,7 @@ public class Puzzle : MonoBehaviour
         //print("Puzzle resuelto!");
         puzzleResuelto = true;
 
-        StartCoroutine(GetComponent<StreamVideo>().PlayVideo());
+        StartCoroutine(GetComponent<StreamVideoPuzzle>().PlayVideo());
         StartCoroutine(CambiarEscena(12));
     }
 
