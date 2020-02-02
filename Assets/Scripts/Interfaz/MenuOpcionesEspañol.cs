@@ -3,15 +3,15 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class MenuOpciones : MonoBehaviour
+public class MenuOpcionesEspañol : MonoBehaviour
 {
-    public static bool esp = false;
+    public static bool esp = true;
     bool isMute;
 
     // Start is called before the first frame update
     public void Return()
     {
-        SceneManager.LoadScene("MenuPrincipal");
+        SceneManager.LoadScene("MenuPrincipalEspañol");
     }
     public void FullScreen()
     {
@@ -30,9 +30,9 @@ public class MenuOpciones : MonoBehaviour
         AudioListener.volume = isMute ? 0 : 1;
     }
 
-    public void CambiarAEspañol()
+    public void CambiarAIngles()
     {
-        SceneManager.LoadScene("MenuOpcionesEspañol");
+        SceneManager.LoadScene("MenuOpciones");
     }
 
 

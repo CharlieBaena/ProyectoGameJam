@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using UnityEngine.UI;
 
 
-public class MenuPuzzles : MonoBehaviour
+public class MenuPuzzlesEspañol : MonoBehaviour
 {
     public Transform button1;
     public Transform button2;
@@ -148,7 +148,7 @@ public class MenuPuzzles : MonoBehaviour
     {
         if (puzzlesResueltos == 0)
         {
-            SceneManager.LoadScene("EscenaPrimerPuzzle");
+            SceneManager.LoadScene("EscenaPrimerPuzzleEspañol");
             button1.GetComponent<Button>().interactable = false; //Desactivar button actual
             button1.gameObject.SetActive(false);
             button2.GetComponent<Button>().interactable = true;  //Activar siguiente button
@@ -160,7 +160,7 @@ public class MenuPuzzles : MonoBehaviour
     {
         if (puzzlesResueltos == 1)
         {
-            SceneManager.LoadScene("EscenaSegundoPuzzle");
+            SceneManager.LoadScene("EscenaSegundoPuzzleEspañol");
             button2.GetComponent<Button>().interactable = false;
             button2.gameObject.SetActive(false);
             button3.GetComponent<Button>().interactable = true;
@@ -172,7 +172,7 @@ public class MenuPuzzles : MonoBehaviour
     {
         if (puzzlesResueltos == 2)
         {
-            SceneManager.LoadScene("EscenaTercerPuzzle");
+            SceneManager.LoadScene("EscenaTercerPuzzleEspañol");
             button3.GetComponent<Button>().interactable = false;
             button3.gameObject.SetActive(false);
             button4.GetComponent<Button>().interactable = true;
@@ -184,7 +184,7 @@ public class MenuPuzzles : MonoBehaviour
     {
         if (puzzlesResueltos == 3)
         {
-            SceneManager.LoadScene("EscenaCuartoPuzzle");
+            SceneManager.LoadScene("EscenaCuartoPuzzleEspañol");
             button4.GetComponent<Button>().interactable = false;
             button4.gameObject.SetActive(false);
             button5.GetComponent<Button>().interactable = true;
@@ -196,7 +196,7 @@ public class MenuPuzzles : MonoBehaviour
     {
         if (puzzlesResueltos == 4)
         {
-            SceneManager.LoadScene("EscenaQuintoPuzzle");
+            SceneManager.LoadScene("EscenaQuintoPuzzleEspañol");
             button5.GetComponent<Button>().interactable = false;
             button5.gameObject.SetActive(false);
             button6.GetComponent<Button>().interactable = true;
@@ -206,9 +206,9 @@ public class MenuPuzzles : MonoBehaviour
 
     public void LoadScene6()
     {
-        if(puzzlesResueltos == 5)
+        if (puzzlesResueltos == 5)
         {
-            SceneManager.LoadScene("EscenaSextoPuzzle");
+            SceneManager.LoadScene("EscenaSextoPuzzleEspañol");
             button6.GetComponent<Button>().interactable = false;
             button6.gameObject.SetActive(false);
             button7.gameObject.SetActive(true);                     //Activar button7
@@ -220,13 +220,13 @@ public class MenuPuzzles : MonoBehaviour
     {
         if (puzzlesResueltos == 6)
         {
-            SceneManager.LoadScene("EscenaSeptimaPuzzle");
+            SceneManager.LoadScene("EscenaSeptimaPuzzleEspañol");
         }
     }
 
     public void VolverAtras()
     {
-        SceneManager.LoadScene("MenuPrincipal");
+        SceneManager.LoadScene("MenuPrincipalEspañol");
     }
 
 }

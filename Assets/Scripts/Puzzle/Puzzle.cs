@@ -113,7 +113,14 @@ public class Puzzle : MonoBehaviour
         //print("Puzzle resuelto!");
         puzzleResuelto = true;
         //print(MenuPuzzles.puzzlesResueltos);
-        MenuPuzzles.puzzlesResueltos++;
+        if (MenuOpcionesEspañol.esp)
+        {
+            MenuPuzzlesEspañol.puzzlesResueltos++;
+        }
+        else
+        {
+            MenuPuzzles.puzzlesResueltos++;
+        }
         //print(MenuPuzzles.puzzlesResueltos);
 
         StartCoroutine(GetComponent<StreamVideoPuzzle>().PlayVideo());
@@ -130,7 +137,14 @@ public class Puzzle : MonoBehaviour
             yield return 0;
         }
         Time.timeScale = 1f;
-        SceneManager.LoadScene("InterfazDePuzzle");
+        if (MenuOpcionesEspañol.esp)
+        {
+            SceneManager.LoadScene("InterfazDePuzzleEspañol");
+        }
+        else
+        {
+            SceneManager.LoadScene("InterfazDePuzzle");
+        }
         
     }
 
