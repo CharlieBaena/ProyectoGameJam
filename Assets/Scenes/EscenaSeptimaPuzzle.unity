@@ -577,36 +577,36 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fichaImg:
-  - {fileID: 1733877629497239416, guid: 3e912a4c0fafe524abc4e410a7645e93, type: 3}
-  - {fileID: 3151464256124834308, guid: 3e912a4c0fafe524abc4e410a7645e93, type: 3}
-  - {fileID: 7584613098605199948, guid: 3e912a4c0fafe524abc4e410a7645e93, type: 3}
-  - {fileID: 8139715026807267573, guid: 3e912a4c0fafe524abc4e410a7645e93, type: 3}
-  - {fileID: 6460526341018923259, guid: 3e912a4c0fafe524abc4e410a7645e93, type: 3}
-  - {fileID: 914176213772730675, guid: 3e912a4c0fafe524abc4e410a7645e93, type: 3}
-  - {fileID: 3277969122017399642, guid: 3e912a4c0fafe524abc4e410a7645e93, type: 3}
-  - {fileID: 8805296930622607071, guid: 3e912a4c0fafe524abc4e410a7645e93, type: 3}
-  - {fileID: -940773734646729912, guid: 3e912a4c0fafe524abc4e410a7645e93, type: 3}
-  - {fileID: -6220509104479861632, guid: 3e912a4c0fafe524abc4e410a7645e93, type: 3}
-  - {fileID: -6308074645714850683, guid: 3e912a4c0fafe524abc4e410a7645e93, type: 3}
-  - {fileID: -6104154589338596701, guid: 3e912a4c0fafe524abc4e410a7645e93, type: 3}
-  - {fileID: -2214774340930331730, guid: 3e912a4c0fafe524abc4e410a7645e93, type: 3}
-  - {fileID: -8775223818702315525, guid: 3e912a4c0fafe524abc4e410a7645e93, type: 3}
-  - {fileID: -713540347227433466, guid: 3e912a4c0fafe524abc4e410a7645e93, type: 3}
-  - {fileID: 8286776889146402334, guid: 3e912a4c0fafe524abc4e410a7645e93, type: 3}
-  - {fileID: -5032791726557805989, guid: 3e912a4c0fafe524abc4e410a7645e93, type: 3}
-  - {fileID: -2637708897614695532, guid: 3e912a4c0fafe524abc4e410a7645e93, type: 3}
-  - {fileID: -8841623885762618907, guid: 3e912a4c0fafe524abc4e410a7645e93, type: 3}
-  - {fileID: -2654375833653129520, guid: 3e912a4c0fafe524abc4e410a7645e93, type: 3}
-  - {fileID: 6490524024475279565, guid: 3e912a4c0fafe524abc4e410a7645e93, type: 3}
-  - {fileID: 4503106855829063098, guid: 3e912a4c0fafe524abc4e410a7645e93, type: 3}
-  - {fileID: -4843948682134728863, guid: 3e912a4c0fafe524abc4e410a7645e93, type: 3}
-  - {fileID: -7699877737447108795, guid: 3e912a4c0fafe524abc4e410a7645e93, type: 3}
-  - {fileID: 3629668914022953811, guid: 3e912a4c0fafe524abc4e410a7645e93, type: 3}
+  - {fileID: -1971826880266607932, guid: 5cad47bd6f80a8a4685c6fe9722b1eb2, type: 3}
+  - {fileID: 927198442076788014, guid: 5cad47bd6f80a8a4685c6fe9722b1eb2, type: 3}
+  - {fileID: -37158619594024953, guid: 5cad47bd6f80a8a4685c6fe9722b1eb2, type: 3}
+  - {fileID: -7281264487326591659, guid: 5cad47bd6f80a8a4685c6fe9722b1eb2, type: 3}
+  - {fileID: 4776209311782394850, guid: 5cad47bd6f80a8a4685c6fe9722b1eb2, type: 3}
+  - {fileID: -6492960985128604385, guid: 5cad47bd6f80a8a4685c6fe9722b1eb2, type: 3}
+  - {fileID: -2659310376622201523, guid: 5cad47bd6f80a8a4685c6fe9722b1eb2, type: 3}
+  - {fileID: 7556098722988697725, guid: 5cad47bd6f80a8a4685c6fe9722b1eb2, type: 3}
+  - {fileID: 1840216593244017660, guid: 5cad47bd6f80a8a4685c6fe9722b1eb2, type: 3}
+  - {fileID: 8751363315544284606, guid: 5cad47bd6f80a8a4685c6fe9722b1eb2, type: 3}
+  - {fileID: -5902523306670605623, guid: 5cad47bd6f80a8a4685c6fe9722b1eb2, type: 3}
+  - {fileID: -3814082252245749323, guid: 5cad47bd6f80a8a4685c6fe9722b1eb2, type: 3}
+  - {fileID: 2992563966943240118, guid: 5cad47bd6f80a8a4685c6fe9722b1eb2, type: 3}
+  - {fileID: -3034700769866395427, guid: 5cad47bd6f80a8a4685c6fe9722b1eb2, type: 3}
+  - {fileID: 5682576098126220537, guid: 5cad47bd6f80a8a4685c6fe9722b1eb2, type: 3}
+  - {fileID: -794801108737892231, guid: 5cad47bd6f80a8a4685c6fe9722b1eb2, type: 3}
+  - {fileID: -2004464879465747532, guid: 5cad47bd6f80a8a4685c6fe9722b1eb2, type: 3}
+  - {fileID: -2565927579179747654, guid: 5cad47bd6f80a8a4685c6fe9722b1eb2, type: 3}
+  - {fileID: -384018690922094128, guid: 5cad47bd6f80a8a4685c6fe9722b1eb2, type: 3}
+  - {fileID: -6098197534633045078, guid: 5cad47bd6f80a8a4685c6fe9722b1eb2, type: 3}
+  - {fileID: 4984892347654963870, guid: 5cad47bd6f80a8a4685c6fe9722b1eb2, type: 3}
+  - {fileID: 113864182022428657, guid: 5cad47bd6f80a8a4685c6fe9722b1eb2, type: 3}
+  - {fileID: 3214204076717149899, guid: 5cad47bd6f80a8a4685c6fe9722b1eb2, type: 3}
+  - {fileID: -8169649518519141153, guid: 5cad47bd6f80a8a4685c6fe9722b1eb2, type: 3}
+  - {fileID: 2979698267632904601, guid: 5cad47bd6f80a8a4685c6fe9722b1eb2, type: 3}
   fichaPrefab: {fileID: 8173507299562568335, guid: 3e62d49aea064c84081e9f149f9f6f2b,
     type: 3}
   bordePrefab: {fileID: 7948465901599154172, guid: 2baa755f07127f843a06c1dabdcca4b0,
     type: 3}
-  fichaEscondidaImg: {fileID: 8286776889146402334, guid: 3e912a4c0fafe524abc4e410a7645e93,
+  fichaEscondidaImg: {fileID: -37158619594024953, guid: 5cad47bd6f80a8a4685c6fe9722b1eb2,
     type: 3}
   dificultadFacil: 0
   puzzleResuelto: 0

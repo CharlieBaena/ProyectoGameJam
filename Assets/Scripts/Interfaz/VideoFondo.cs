@@ -8,7 +8,7 @@ public class VideoFondo : MonoBehaviour
 {
     public RawImage rawImage;
     public VideoPlayer videoPlayer;
-    public AudioSource audioSource;
+    //public AudioSource audioSource;
 
     
     void Start()
@@ -26,6 +26,6 @@ public class VideoFondo : MonoBehaviour
         }
         rawImage.texture = videoPlayer.texture;
         videoPlayer.Play();
-        audioSource.Play();
+        //audioSource.Play();
     }
 }

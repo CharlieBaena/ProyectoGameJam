@@ -188,7 +188,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: Return
+  m_Text: Volver
 --- !u!222 &136527015
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -616,7 +616,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fondo: {fileID: 894533894}
-  videoPlayer: {fileID: 0}
+  videoPlayer: {fileID: 1833867551}
 --- !u!1 &894533892
 GameObject:
   m_ObjectHideFlags: 0

@@ -7,7 +7,7 @@ public class MainMenuEspañol : MonoBehaviour
 {
     public void Play()
     {
-        SceneManager.LoadScene("CinematicaPrincipio");
+        SceneManager.LoadScene("CinematicaPrincipioEspañol");
     }
 
     public void CloseApp()

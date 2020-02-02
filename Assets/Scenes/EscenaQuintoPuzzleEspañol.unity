@@ -686,7 +686,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   fondo: {fileID: 33385822}
-  videoPlayer: {fileID: 0}
+  videoPlayer: {fileID: 1317040270}
 --- !u!1 &1008230363
 GameObject:
   m_ObjectHideFlags: 0
