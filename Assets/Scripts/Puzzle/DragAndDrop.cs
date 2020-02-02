@@ -4,16 +4,16 @@ using UnityEngine;
 
 public class DragAndDrop : MonoBehaviour
 {
-    Vector3 posInicial;
+    //Vector3 posInicial;
     Puzzle puzzle;
     bool puedoMover = false;
 
 
-    private void Awake(){
+    private void Awake() {
         puzzle = GameObject.Find("Scripts").GetComponent(typeof(Puzzle)) as Puzzle;
     }
 
-    private void OnMouseDown(){
+    private void OnMouseDown() {
 
         //Comprobar que esta la ficha vacia adyacente
         if (!puzzle.puzzleResuelto)
@@ -51,24 +51,16 @@ public class DragAndDrop : MonoBehaviour
         }
     }
 
-    private void OnMouseUp(){
-        //posInicial = transform.position;
+    private void OnMouseUp() { 
         if (puedoMover)
         {
             transform.position = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), 0);
-
-            if (transform.position != posInicial)
-            {
-                puzzle.ComprobarGanador();
-            }
-
-            transform.position = new Vector3(Mathf.Round(transform.position.x), Mathf.Round(transform.position.y), 0);
+            puzzle.ComprobarGanador();
             puedoMover = false;
         }
     }
 
-    void CambiarPosicion()
-    {
+    void CambiarPosicion() {
         Vector3 posVacia = transform.position;
         transform.position = puzzle.fichaEscondida.transform.position;
         puzzle.fichaEscondida.transform.position = posVacia;

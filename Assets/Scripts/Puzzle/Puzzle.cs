@@ -25,14 +25,14 @@ public class Puzzle : MonoBehaviour
 
 
 
-    private void Awake(){
+    private void Awake() {
         //buscamos los objetos que nos almacenaran las fichas y los bordes
         padreFichas = GameObject.Find("Fichas");
         padreBordes = GameObject.Find("Bordes");    
     }
 
 
-    void Start(){
+    void Start() {
         if (Mathf.Sqrt (fichaImg.Count) == Mathf.Round (Mathf.Sqrt(fichaImg.Count))){ //Comprueba si el numero de fichas es cuadrado
             CrearFichas();
         } else {
@@ -40,7 +40,7 @@ public class Puzzle : MonoBehaviour
         }
     }
 
-    void CrearFichas(){
+    void CrearFichas() {
         int contador = 0;
         numCostado = (int)Mathf.Sqrt(fichaImg.Count);
 
@@ -83,7 +83,7 @@ public class Puzzle : MonoBehaviour
     }
 
 
-    void Barajar(){
+    void Barajar() {
         int aleatorio;
         
         for (int i = 0; i < arrayFichas.Length; i++)
@@ -96,7 +96,7 @@ public class Puzzle : MonoBehaviour
     }
 
 
-    public void ComprobarGanador(){
+    public void ComprobarGanador() {
         for(int i = 0; i < arrayFichas.Length; i++)
         {
             if (posicionesIniciales[i] != arrayFichas[i].transform.position)                        //repasamos las posiciones actuales y con que una ya no
@@ -108,11 +108,10 @@ public class Puzzle : MonoBehaviour
        
         //print("Puzzle resuelto!");
         puzzleResuelto = true;
-        StartCoroutine(PauseGame(30));
+        StartCoroutine(CambiarEscena(10));
        
 
-    IEnumerator PauseGame(float pauseTime)
-    {
+    IEnumerator CambiarEscena(float pauseTime) {
         Debug.Log("Inside PauseGame()");
         Time.timeScale = 0f;
         float pauseEndTime = Time.realtimeSinceStartup + pauseTime;
