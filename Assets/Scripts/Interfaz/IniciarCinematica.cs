@@ -32,6 +32,5 @@ public class IniciarCinematica : MonoBehaviour
             yield return waitForSeconds;
             break;
         }
-        //SceneManager.LoadScene("InterfazDePuzzle");
     }
 }

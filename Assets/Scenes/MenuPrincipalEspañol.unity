@@ -698,7 +698,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 882060839}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 994481dae46bfc649a2c4a15eb728715, type: 3}
+  m_Script: {fileID: 11500000, guid: 7b073b466a34b0048afea816aa57ca7b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!328 &882060844
@@ -991,7 +991,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   rawImage: {fileID: 1001566634}
   videoPlayer: {fileID: 1042963399}
-  audioSource: {fileID: 994587226}
 --- !u!328 &1042963399
 VideoPlayer:
   m_ObjectHideFlags: 0

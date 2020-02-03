@@ -113,9 +113,9 @@ public class Puzzle : MonoBehaviour
         //print("Puzzle resuelto!");
         puzzleResuelto = true;
         //print(MenuPuzzles.puzzlesResueltos);
-        if (MenuOpcionesEspañol.esp)
+        if (MenuOpciones.esp)
         {
-            MenuPuzzlesEspañol.puzzlesResueltos++;
+            MenuPuzzles.puzzlesResueltos++;
         }
         else
         {
@@ -137,7 +137,7 @@ public class Puzzle : MonoBehaviour
             yield return 0;
         }
         Time.timeScale = 1f;
-        if (MenuOpcionesEspañol.esp)
+        if (MenuOpciones.esp)
         {
             SceneManager.LoadScene("InterfazDePuzzleEspañol");
         }

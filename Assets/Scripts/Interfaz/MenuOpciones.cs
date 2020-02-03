@@ -5,8 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class MenuOpciones : MonoBehaviour
 {
-    public static bool esp = false;
+    public static bool esp;
     bool isMute;
+
+
+    private void Start()
+    {
+        esp = false;
+    }
 
     // Start is called before the first frame update
     public void Return()
@@ -32,6 +38,7 @@ public class MenuOpciones : MonoBehaviour
 
     public void CambiarAEspañol()
     {
+        esp = true;
         SceneManager.LoadScene("MenuOpcionesEspañol");
     }
 

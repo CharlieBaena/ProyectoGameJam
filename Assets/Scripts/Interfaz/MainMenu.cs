@@ -5,9 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MainMenu : MonoBehaviour
 {
+
     public void Play()
     {
-        SceneManager.LoadScene("CinematicaPrincipio");
+        if(MenuOpciones.esp)
+            SceneManager.LoadScene("CinematicaPrincipioEspañol");
+        else
+            SceneManager.LoadScene("CinematicaPrincipio");
     }
 
     public void CloseApp()
@@ -17,7 +21,10 @@ public class MainMenu : MonoBehaviour
 
     public void Options()
     {
-        SceneManager.LoadScene("MenuOpciones");
+        if (MenuOpciones.esp)
+            SceneManager.LoadScene("MenuOpcionesEspañol");
+        else
+            SceneManager.LoadScene("MenuOpciones");
     }
 
 
