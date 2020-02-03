@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class Puzzle : MonoBehaviour
 {
+
     public List<Sprite> fichaImg = new List<Sprite>();  //lista donde almacenará los sprites cortados de cada ficha
     public GameObject fichaPrefab; //ficha basica de la cual se crearan el resto
     public GameObject bordePrefab; //borde basico del cual se crearan el resto
@@ -31,7 +32,7 @@ public class Puzzle : MonoBehaviour
     private void Awake() {
         //buscamos los objetos que nos almacenaran las fichas y los bordes
         padreFichas = GameObject.Find("Fichas");
-        padreBordes = GameObject.Find("Bordes");  
+        padreBordes = GameObject.Find("Bordes");
         //reproductor = GameObject.Find("Scripts").GetComponent(typeof(StreamVideo)) as StreamVideo;
     }
 
