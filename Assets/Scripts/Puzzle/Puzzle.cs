@@ -143,14 +143,16 @@ public class Puzzle : MonoBehaviour
             print("En el script de puzzle antes de cargar escena puzzles resueltos = " + MenuPuzzles.puzzlesResueltos);
             if (MenuPuzzles.puzzlesResueltos == 7)
                 SceneManager.LoadScene("Creditos");
-            SceneManager.LoadScene("InterfazDePuzzleEspañol");
+            else
+                SceneManager.LoadScene("InterfazDePuzzleEspañol");
         }
         else
         {
             print("En el script de puzzle antes de cargar escena puzzles resueltos = " + MenuPuzzles.puzzlesResueltos);
             if (MenuPuzzles.puzzlesResueltos == 7)
                 SceneManager.LoadScene("Creditos");
-            SceneManager.LoadScene("InterfazDePuzzle");
+            else
+                SceneManager.LoadScene("InterfazDePuzzle");
         }
         
     }

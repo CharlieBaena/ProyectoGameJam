@@ -174,7 +174,7 @@ public class MenuPuzzles : MonoBehaviour
             else
                 SceneManager.LoadScene("EscenaPrimerPuzzle");
         }
-        if (puzzlesResueltos == 7)
+        if (puzzlesResueltos >= 7)
         {
             if (MenuOpciones.esp)
                 SceneManager.LoadScene("EscenaPrimerPuzzleEspañol");
@@ -196,7 +196,7 @@ public class MenuPuzzles : MonoBehaviour
             else
                 SceneManager.LoadScene("EscenaSegundoPuzzle");
         }
-        if (puzzlesResueltos == 7)
+        if (puzzlesResueltos >= 7)
         {
             if (MenuOpciones.esp)
                 SceneManager.LoadScene("EscenaSegundoPuzzleEspañol");
@@ -218,7 +218,7 @@ public class MenuPuzzles : MonoBehaviour
             else
                 SceneManager.LoadScene("EscenaTercerPuzzle");
         }
-        if (puzzlesResueltos == 7)
+        if (puzzlesResueltos >= 7)
         {
             if (MenuOpciones.esp)
                 SceneManager.LoadScene("EscenaTercerPuzzleEspañol");
@@ -241,7 +241,7 @@ public class MenuPuzzles : MonoBehaviour
             else
                 SceneManager.LoadScene("EscenaCuartoPuzzle");
         }
-        if (puzzlesResueltos == 7)
+        if (puzzlesResueltos >= 7)
         {
             if (MenuOpciones.esp)
                 SceneManager.LoadScene("EscenaCuartoPuzzleEspañol");
@@ -263,7 +263,7 @@ public class MenuPuzzles : MonoBehaviour
             else
                 SceneManager.LoadScene("EscenaQuintoPuzzle");
         }
-        if (puzzlesResueltos == 7)
+        if (puzzlesResueltos >= 7)
         {
             if (MenuOpciones.esp)
                 SceneManager.LoadScene("EscenaQuintoPuzzleEspañol");
@@ -285,7 +285,7 @@ public class MenuPuzzles : MonoBehaviour
             else
                 SceneManager.LoadScene("EscenaSextoPuzzle");
         }
-        if (puzzlesResueltos == 7)
+        if (puzzlesResueltos >= 7)
         {
             if (MenuOpciones.esp)
                 SceneManager.LoadScene("EscenaSextoPuzzleEspañol");
@@ -317,7 +317,7 @@ public class MenuPuzzles : MonoBehaviour
             else
                 SceneManager.LoadScene("EscenaSeptimaPuzzle");
         }
-        if (puzzlesResueltos == 7)
+        if (puzzlesResueltos >= 7)
         {
             if (MenuOpciones.esp)
                 SceneManager.LoadScene("EscenaSeptimaPuzzleEspañol");
