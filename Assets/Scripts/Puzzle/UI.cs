@@ -13,7 +13,7 @@ public class UI : MonoBehaviour
     }
 
     public void BotonVolver() {
-        if (MenuOpcionesEspañol.esp)
+        if (MenuOpciones.esp)
             SceneManager.LoadScene("InterfazDePuzzleEspañol");
         else
             SceneManager.LoadScene("InterfazDePuzzle");

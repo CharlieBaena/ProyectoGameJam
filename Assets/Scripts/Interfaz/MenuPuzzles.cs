@@ -17,12 +17,17 @@ public class MenuPuzzles : MonoBehaviour
 
 
     [HideInInspector]
-    public static int puzzlesResueltos  =  0;
+    public static int puzzlesResueltos = 0;
 
-  
+    private void Start()
+    {
+        //puzzlesResueltos = 0;
+        print("llama start");
+    }
 
     void Update()
     {
+        print("llama update " + puzzlesResueltos);
 
         if (puzzlesResueltos == 0)
         {
@@ -135,13 +140,15 @@ public class MenuPuzzles : MonoBehaviour
             button5.GetComponent<Button>().interactable = false;
             button6.GetComponent<Button>().interactable = false;*/
         }else {
+            print("Entro al 7");
             button1.gameObject.SetActive(true);
             button2.gameObject.SetActive(true);
             button3.gameObject.SetActive(true);
             button4.gameObject.SetActive(true);
             button5.gameObject.SetActive(true);
             button6.gameObject.SetActive(true);
-            button7.gameObject.SetActive(true);/*
+            button7.gameObject.SetActive(true);
+            /*
             button1.GetComponent<Button>().interactable = true;
             button2.GetComponent<Button>().interactable = true;
             button3.GetComponent<Button>().interactable = true;

@@ -122,7 +122,7 @@ public class Puzzle : MonoBehaviour
         {
             MenuPuzzles.puzzlesResueltos++;
         }
-        //print(MenuPuzzles.puzzlesResueltos);
+        print("Antes de reproducir el video" + MenuPuzzles.puzzlesResueltos);
 
         StartCoroutine(GetComponent<StreamVideoPuzzle>().PlayVideo());
         StartCoroutine(CambiarEscena(12));
@@ -140,10 +140,16 @@ public class Puzzle : MonoBehaviour
         Time.timeScale = 1f;
         if (MenuOpciones.esp)
         {
+            print("En el script de puzzle antes de cargar escena puzzles resueltos = " + MenuPuzzles.puzzlesResueltos);
+            if (MenuPuzzles.puzzlesResueltos == 7)
+                SceneManager.LoadScene("Creditos");
             SceneManager.LoadScene("InterfazDePuzzleEspañol");
         }
         else
         {
+            print("En el script de puzzle antes de cargar escena puzzles resueltos = " + MenuPuzzles.puzzlesResueltos);
+            if (MenuPuzzles.puzzlesResueltos == 7)
+                SceneManager.LoadScene("Creditos");
             SceneManager.LoadScene("InterfazDePuzzle");
         }
         
