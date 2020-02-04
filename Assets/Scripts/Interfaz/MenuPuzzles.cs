@@ -174,6 +174,13 @@ public class MenuPuzzles : MonoBehaviour
             else
                 SceneManager.LoadScene("EscenaPrimerPuzzle");
         }
+        if (puzzlesResueltos == 7)
+        {
+            if (MenuOpciones.esp)
+                SceneManager.LoadScene("EscenaPrimerPuzzleEspañol");
+            else
+                SceneManager.LoadScene("EscenaPrimerPuzzle");
+        }
     }
 
     public void LoadScene2()
@@ -184,6 +191,13 @@ public class MenuPuzzles : MonoBehaviour
             button2.gameObject.SetActive(false);
             //button3.GetComponent<Button>().interactable = true;
             button3.gameObject.SetActive(true);
+            if (MenuOpciones.esp)
+                SceneManager.LoadScene("EscenaSegundoPuzzleEspañol");
+            else
+                SceneManager.LoadScene("EscenaSegundoPuzzle");
+        }
+        if (puzzlesResueltos == 7)
+        {
             if (MenuOpciones.esp)
                 SceneManager.LoadScene("EscenaSegundoPuzzleEspañol");
             else
@@ -204,6 +218,14 @@ public class MenuPuzzles : MonoBehaviour
             else
                 SceneManager.LoadScene("EscenaTercerPuzzle");
         }
+        if (puzzlesResueltos == 7)
+        {
+            if (MenuOpciones.esp)
+                SceneManager.LoadScene("EscenaTercerPuzzleEspañol");
+            else
+                SceneManager.LoadScene("EscenaTercerPuzzle");
+        }
+
     }
 
     public void LoadScene4()
@@ -214,6 +236,13 @@ public class MenuPuzzles : MonoBehaviour
             button4.gameObject.SetActive(false);
             //button5.GetComponent<Button>().interactable = true;
             button5.gameObject.SetActive(true);
+            if (MenuOpciones.esp)
+                SceneManager.LoadScene("EscenaCuartoPuzzleEspañol");
+            else
+                SceneManager.LoadScene("EscenaCuartoPuzzle");
+        }
+        if (puzzlesResueltos == 7)
+        {
             if (MenuOpciones.esp)
                 SceneManager.LoadScene("EscenaCuartoPuzzleEspañol");
             else
@@ -234,6 +263,13 @@ public class MenuPuzzles : MonoBehaviour
             else
                 SceneManager.LoadScene("EscenaQuintoPuzzle");
         }
+        if (puzzlesResueltos == 7)
+        {
+            if (MenuOpciones.esp)
+                SceneManager.LoadScene("EscenaQuintoPuzzleEspañol");
+            else
+                SceneManager.LoadScene("EscenaQuintoPuzzle");
+        }
     }
 
     public void LoadScene6()
@@ -244,6 +280,13 @@ public class MenuPuzzles : MonoBehaviour
             button6.gameObject.SetActive(false);
             //button7.gameObject.SetActive(true);                     
             button7.GetComponent<Button>().interactable = true;
+            if (MenuOpciones.esp)
+                SceneManager.LoadScene("EscenaSextoPuzzleEspañol");
+            else
+                SceneManager.LoadScene("EscenaSextoPuzzle");
+        }
+        if (puzzlesResueltos == 7)
+        {
             if (MenuOpciones.esp)
                 SceneManager.LoadScene("EscenaSextoPuzzleEspañol");
             else
@@ -269,6 +312,13 @@ public class MenuPuzzles : MonoBehaviour
             button5.GetComponent<Button>().interactable = true;
             button6.GetComponent<Button>().interactable = true;
             button7.GetComponent<Button>().interactable = true;*/
+            if (MenuOpciones.esp)
+                SceneManager.LoadScene("EscenaSeptimaPuzzleEspañol");
+            else
+                SceneManager.LoadScene("EscenaSeptimaPuzzle");
+        }
+        if (puzzlesResueltos == 7)
+        {
             if (MenuOpciones.esp)
                 SceneManager.LoadScene("EscenaSeptimaPuzzleEspañol");
             else
