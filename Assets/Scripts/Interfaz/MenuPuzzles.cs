@@ -31,13 +31,13 @@ public class MenuPuzzles : MonoBehaviour
             button4.gameObject.SetActive(false);
             button5.gameObject.SetActive(false);
             button6.gameObject.SetActive(false);
-            button7.gameObject.SetActive(false);
+            button7.gameObject.SetActive(false);/*
             button2.GetComponent<Button>().interactable = false;
             button3.GetComponent<Button>().interactable = false;
             button4.GetComponent<Button>().interactable = false;
             button5.GetComponent<Button>().interactable = false;
             button6.GetComponent<Button>().interactable = false;
-            button7.GetComponent<Button>().interactable = false;
+            button7.GetComponent<Button>().interactable = false;*/
         }else
 
         if(puzzlesResueltos == 1)
@@ -47,13 +47,13 @@ public class MenuPuzzles : MonoBehaviour
             button4.gameObject.SetActive(false);
             button5.gameObject.SetActive(false);
             button6.gameObject.SetActive(false);
-            button7.gameObject.SetActive(false);
+            button7.gameObject.SetActive(false);/*
             button1.GetComponent<Button>().interactable = false;
             button3.GetComponent<Button>().interactable = false;
             button4.GetComponent<Button>().interactable = false;
             button5.GetComponent<Button>().interactable = false;
             button6.GetComponent<Button>().interactable = false;
-            button7.GetComponent<Button>().interactable = false;
+            button7.GetComponent<Button>().interactable = false;*/
         }else
 
         if (puzzlesResueltos == 2)
@@ -63,13 +63,13 @@ public class MenuPuzzles : MonoBehaviour
             button4.gameObject.SetActive(false);
             button5.gameObject.SetActive(false);
             button6.gameObject.SetActive(false);
-            button7.gameObject.SetActive(false);
+            button7.gameObject.SetActive(false);/*
             button1.GetComponent<Button>().interactable = false;
             button2.GetComponent<Button>().interactable = false;
             button4.GetComponent<Button>().interactable = false;
             button5.GetComponent<Button>().interactable = false;
             button6.GetComponent<Button>().interactable = false;
-            button7.GetComponent<Button>().interactable = false;
+            button7.GetComponent<Button>().interactable = false;*/
         }else
 
         if (puzzlesResueltos == 3)
@@ -79,13 +79,13 @@ public class MenuPuzzles : MonoBehaviour
             button3.gameObject.SetActive(false);
             button5.gameObject.SetActive(false);
             button6.gameObject.SetActive(false);
-            button7.gameObject.SetActive(false);
+            button7.gameObject.SetActive(false);/*
             button1.GetComponent<Button>().interactable = false;
             button2.GetComponent<Button>().interactable = false;
             button3.GetComponent<Button>().interactable = false;
             button5.GetComponent<Button>().interactable = false;
             button6.GetComponent<Button>().interactable = false;
-            button7.GetComponent<Button>().interactable = false;
+            button7.GetComponent<Button>().interactable = false;*/
         }else
 
         if (puzzlesResueltos == 4)
@@ -95,13 +95,13 @@ public class MenuPuzzles : MonoBehaviour
             button3.gameObject.SetActive(false);
             button4.gameObject.SetActive(false);
             button6.gameObject.SetActive(false);
-            button7.gameObject.SetActive(false);
+            button7.gameObject.SetActive(false);/*
             button1.GetComponent<Button>().interactable = false;
             button2.GetComponent<Button>().interactable = false;
             button3.GetComponent<Button>().interactable = false;
             button4.GetComponent<Button>().interactable = false;
             button6.GetComponent<Button>().interactable = false;
-            button7.GetComponent<Button>().interactable = false;
+            button7.GetComponent<Button>().interactable = false;*/
         }else
 
         if (puzzlesResueltos == 5)
@@ -111,13 +111,13 @@ public class MenuPuzzles : MonoBehaviour
             button3.gameObject.SetActive(false);
             button4.gameObject.SetActive(false);
             button5.gameObject.SetActive(false);
-            button7.gameObject.SetActive(false);
+            button7.gameObject.SetActive(false);/*
             button1.GetComponent<Button>().interactable = false;
             button2.GetComponent<Button>().interactable = false;
             button3.GetComponent<Button>().interactable = false;
             button4.GetComponent<Button>().interactable = false;
             button5.GetComponent<Button>().interactable = false;
-            button7.GetComponent<Button>().interactable = false;
+            button7.GetComponent<Button>().interactable = false;*/
         }else
 
         if (puzzlesResueltos == 6)
@@ -127,13 +127,13 @@ public class MenuPuzzles : MonoBehaviour
             button3.gameObject.SetActive(false);
             button4.gameObject.SetActive(false);
             button5.gameObject.SetActive(false);
-            button6.gameObject.SetActive(false);
+            button6.gameObject.SetActive(false);/*
             button1.GetComponent<Button>().interactable = false;
             button2.GetComponent<Button>().interactable = false;
             button3.GetComponent<Button>().interactable = false;
             button4.GetComponent<Button>().interactable = false;
             button5.GetComponent<Button>().interactable = false;
-            button6.GetComponent<Button>().interactable = false;
+            button6.GetComponent<Button>().interactable = false;*/
         }else {
             button1.gameObject.SetActive(true);
             button2.gameObject.SetActive(true);
@@ -141,15 +141,16 @@ public class MenuPuzzles : MonoBehaviour
             button4.gameObject.SetActive(true);
             button5.gameObject.SetActive(true);
             button6.gameObject.SetActive(true);
-            button7.gameObject.SetActive(true);
+            button7.gameObject.SetActive(true);/*
             button1.GetComponent<Button>().interactable = true;
             button2.GetComponent<Button>().interactable = true;
             button3.GetComponent<Button>().interactable = true;
             button4.GetComponent<Button>().interactable = true;
             button5.GetComponent<Button>().interactable = true;
             button6.GetComponent<Button>().interactable = true;
-            button7.GetComponent<Button>().interactable = true;
+            button7.GetComponent<Button>().interactable = true;*/
         }
+
 
     }
 
@@ -157,9 +158,9 @@ public class MenuPuzzles : MonoBehaviour
     {
         if (puzzlesResueltos == 0)
         {
-            button1.GetComponent<Button>().interactable = false; //Desactivar button actual
+            //button1.GetComponent<Button>().interactable = false; //Desactivar button actual
             button1.gameObject.SetActive(false);
-            button2.GetComponent<Button>().interactable = true;  //Activar siguiente button
+            //button2.GetComponent<Button>().interactable = true;  //Activar siguiente button
             button2.gameObject.SetActive(true);
             if (MenuOpciones.esp)
                 SceneManager.LoadScene("EscenaPrimerPuzzleEspañol");
@@ -172,9 +173,9 @@ public class MenuPuzzles : MonoBehaviour
     {
         if (puzzlesResueltos == 1)
         {
-            button2.GetComponent<Button>().interactable = false;
+            //button2.GetComponent<Button>().interactable = false;
             button2.gameObject.SetActive(false);
-            button3.GetComponent<Button>().interactable = true;
+            //button3.GetComponent<Button>().interactable = true;
             button3.gameObject.SetActive(true);
             if (MenuOpciones.esp)
                 SceneManager.LoadScene("EscenaSegundoPuzzleEspañol");
@@ -187,9 +188,9 @@ public class MenuPuzzles : MonoBehaviour
     {
         if (puzzlesResueltos == 2)
         {
-            button3.GetComponent<Button>().interactable = false;
+            //button3.GetComponent<Button>().interactable = false;
             button3.gameObject.SetActive(false);
-            button4.GetComponent<Button>().interactable = true;
+            //button4.GetComponent<Button>().interactable = true;
             button4.gameObject.SetActive(true);
             if (MenuOpciones.esp)
                 SceneManager.LoadScene("EscenaTercerPuzzleEspañol");
@@ -202,9 +203,9 @@ public class MenuPuzzles : MonoBehaviour
     {
         if (puzzlesResueltos == 3)
         {
-            button4.GetComponent<Button>().interactable = false;
+            //button4.GetComponent<Button>().interactable = false;
             button4.gameObject.SetActive(false);
-            button5.GetComponent<Button>().interactable = true;
+            //button5.GetComponent<Button>().interactable = true;
             button5.gameObject.SetActive(true);
             if (MenuOpciones.esp)
                 SceneManager.LoadScene("EscenaCuartoPuzzleEspañol");
@@ -217,9 +218,9 @@ public class MenuPuzzles : MonoBehaviour
     {
         if (puzzlesResueltos == 4)
         {
-            button5.GetComponent<Button>().interactable = false;
+            //button5.GetComponent<Button>().interactable = false;
             button5.gameObject.SetActive(false);
-            button6.GetComponent<Button>().interactable = true;
+            //button6.GetComponent<Button>().interactable = true;
             button6.gameObject.SetActive(true);
             if (MenuOpciones.esp)
                 SceneManager.LoadScene("EscenaQuintoPuzzleEspañol");
@@ -232,9 +233,9 @@ public class MenuPuzzles : MonoBehaviour
     {
         if(puzzlesResueltos == 5)
         {
-            button6.GetComponent<Button>().interactable = false;
+            //button6.GetComponent<Button>().interactable = false;
             button6.gameObject.SetActive(false);
-            button7.gameObject.SetActive(true);                     
+            //button7.gameObject.SetActive(true);                     
             button7.GetComponent<Button>().interactable = true;
             if (MenuOpciones.esp)
                 SceneManager.LoadScene("EscenaSextoPuzzleEspañol");
@@ -254,13 +255,13 @@ public class MenuPuzzles : MonoBehaviour
             button5.gameObject.SetActive(true);
             button6.gameObject.SetActive(true);
             button7.gameObject.SetActive(true);
-            button1.GetComponent<Button>().interactable = true;
+            /*button1.GetComponent<Button>().interactable = true;
             button2.GetComponent<Button>().interactable = true;
             button3.GetComponent<Button>().interactable = true;
             button4.GetComponent<Button>().interactable = true;
             button5.GetComponent<Button>().interactable = true;
             button6.GetComponent<Button>().interactable = true;
-            button7.GetComponent<Button>().interactable = true;
+            button7.GetComponent<Button>().interactable = true;*/
             if (MenuOpciones.esp)
                 SceneManager.LoadScene("EscenaSeptimaPuzzleEspañol");
             else
