@@ -110,10 +110,8 @@ public class Puzzle : MonoBehaviour
 
 
         fichaEscondida.gameObject.SetActive(true);
-
-        //print("Puzzle resuelto!");
         puzzleResuelto = true;
-        //print(MenuPuzzles.puzzlesResueltos);
+
         if (MenuOpciones.esp)
         {
             MenuPuzzles.puzzlesResueltos++;
@@ -122,7 +120,6 @@ public class Puzzle : MonoBehaviour
         {
             MenuPuzzles.puzzlesResueltos++;
         }
-        print("Antes de reproducir el video" + MenuPuzzles.puzzlesResueltos);
 
         StartCoroutine(GetComponent<StreamVideoPuzzle>().PlayVideo());
         StartCoroutine(CambiarEscena(12));

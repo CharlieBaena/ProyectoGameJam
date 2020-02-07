@@ -11,6 +11,7 @@ public class StreamVideoPuzzle : MonoBehaviour
 
     public IEnumerator PlayVideo() {
         videoPlayer.Prepare();
+        videoPlayer.frame = 0;
         WaitForSeconds waitForSeconds = new WaitForSeconds(1);
         while (!videoPlayer.isPrepared) {
             yield return waitForSeconds;

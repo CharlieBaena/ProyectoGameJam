@@ -27,6 +27,9 @@ EditorBuildSettings:
     path: "Assets/Scenes/CinematicaPrincipioEspa\xF1ol.unity"
     guid: 424806f65cafee147b27672ed5596978
   - enabled: 1
+    path: Assets/Scenes/EscenaEasterEgg.unity
+    guid: 8babd172160241445967821fdb393f9c
+  - enabled: 1
     path: Assets/Scenes/MenuPrincipal.unity
     guid: 62876584ca32cbb49b87ccda2137112e
   - enabled: 1
